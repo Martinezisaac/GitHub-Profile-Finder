@@ -9,6 +9,7 @@ const User = ( { user } ) => {
         name,
         created_at,
         login,
+        starred_url,
     } = user; 
 
     const createdDate = new Date(created_at);
@@ -38,6 +39,14 @@ const User = ( { user } ) => {
             <div>
                 <p>Following</p>
                 <p> {following} </p>
+            </div>
+            <div>
+                <p>Starred URL</p>
+                <p> {starred_url} </p>
+            </div>
+            <div>
+                <p>Gist</p>
+                <button href={ starred_url }>Hola</button>
             </div>
         </div>
     );
