@@ -1,3 +1,5 @@
+import '../styles/user.css'
+
 //Componente para mostrar la informacion del usuario de Github
 const User = ( { user } ) => {
     const {

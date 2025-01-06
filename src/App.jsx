@@ -1,6 +1,8 @@
 import { use, useEffect, useState } from 'react'
 import './App.css'
 import User from './assets/components/user'
+import Footer from './assets/components/footer'
+import Header from './assets/components/header'
 
 function App() {
   const [userName, setUserName] = useState("Martinezisaac")
@@ -38,6 +40,9 @@ function App() {
 
   return (
     <div className='github-profile-container'>
+
+      <Header />
+
        <div className = "input-wrapper"> 
         <input 
           name = "input-wrapper"
@@ -49,6 +54,9 @@ function App() {
         <button onClick={ handleSubmit }>Search</button>
       </div>
       { userData !== null ? <User user = { userData } /> : null }
+
+    <Footer />
+
     </div>
   );
 }

@@ -1,0 +1,29 @@
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.derechos-reservados {
+    padding-right: 100px;
+}
+
+.content-wrapper {
+    display: flex;  
+    align-items: center; 
+    justify-content: center;
+    gap: 15px;
+    max-width: 100%;
+}
+
+p {
+    color: #6d747c;
+    font-weight: bold;
+}
+
+a {
+    color: #c2c9d1;
+    font-family: Menlo-Bold, sans-serif;
+    text-decoration: none;
+}
