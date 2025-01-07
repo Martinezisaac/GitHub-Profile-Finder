@@ -2,12 +2,15 @@ import '../styles/footer.css'
 import github_logo from '../icons/githubGray.svg'
 
 const Footer = () => {
+    
+    const currentYear = new Date().getFullYear();
+
     return (
         <div className="footer-content">
             <div className='derechos-reservados'>
                 <div className='content-wrapper'>
                     <img src= { github_logo } />
-                    <p> © 2025 GitHub Profile Finder. Inc </p>  
+                    <p> © { currentYear } GitHub Profile Finder. Inc </p>  
                 </div>
             </div>
             <div className='personal-rights'>

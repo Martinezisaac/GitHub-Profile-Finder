@@ -1,0 +1,24 @@
+.content-wrapper {
+    display: flex;
+    margin: 3rem 8rem 3rem 8rem;
+}
+
+.githubDetails {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+}

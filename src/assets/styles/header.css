@@ -1,3 +1,55 @@
+.header-container {
+    overflow: hidden;;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin: 3rem;
+    padding-left: 5rem;
+}
+
+.input-container{
+    position: relative;
+    width: 100%;
+    margin: 3rem;
+    padding-right: 5rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+}
+
+.input-text {
+    background: none;
+    border: 3px solid #353c44;
+    outline: none;
+    padding: 10px; 
+    border-radius: 15px; 
+    font-size: 15px;
+    width: 20rem;
+
+    padding-left: 40px;
+}
+
+.loading-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
     font-family: Menlo-Bold, sans-serif;
     font-weight: bolder;
