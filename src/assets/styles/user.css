@@ -1,11 +1,13 @@
 .content-wrapper {
     display: flex;
-    margin: 3rem 8rem 3rem 8rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 8rem 1rem 8rem;
 }
 
 .githubDetails {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 1fr 2fr;
     width: 100%;
 }
 
@@ -17,8 +19,8 @@
 }
 
 .avatar {
-    width: 350px;
-    height: 350px;
+    width: 22rem;
+    height: 22rem;
     border-radius: 50%;
     object-fit: cover;
 }

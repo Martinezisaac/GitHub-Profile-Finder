@@ -1,12 +1,11 @@
 .footer-content {
-    margin: 0;
-    border: 0;
-    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     width: 100%;
     font-size: 0.9rem;
 }
 
-.content-wrapper {
+.footer-wrapper {
     margin: 0rem 2rem 0rem 2rem;
     display: flex;  
     align-items: center; 
@@ -20,6 +19,12 @@
     align-items: center; 
     justify-content: center;
     gap: 15px;
+}
+
+.content-one {
+    display: flex;  
+    align-items: center; 
+    justify-content: center;
 }
 
 .github-logo {
