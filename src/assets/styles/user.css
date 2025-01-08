@@ -5,7 +5,6 @@
     margin: 0rem 8rem 1rem 8rem;
 }
 
-
 .githubDetails {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -61,14 +60,13 @@
     transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
-
-.joinedDate {
-    padding-top: 1.5rem;
-}
-
 .visit-profile:hover {
     transform: scale(1.015);
     background-color: #3d444d;
+}
+
+.joinedDate {
+    padding-top: 1.5rem;
 }
 
 .followers {
@@ -81,7 +79,6 @@
     width: 25px;
     height: 25px;
 }
-
 
 h2 {
     font-family: "Menlo-Bold";

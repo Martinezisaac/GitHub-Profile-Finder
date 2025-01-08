@@ -1,0 +1,31 @@
+.notFound-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#error-icon {
+    width: 300px;
+    height: 100%;
+}
+
+.error-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.error-2 p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+

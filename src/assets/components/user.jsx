@@ -1,5 +1,6 @@
 import '../styles/user.css'
 import users from '../icons/users.svg'
+import { motion } from "motion/react"
 
 //Componente para mostrar la informacion del usuario de Github
 const User = ( { user } ) => {
@@ -14,7 +15,6 @@ const User = ( { user } ) => {
         created_at,
         login,
         location, 
-        starred_url,
     } = user; 
 
     const createdDate = new Date(created_at);
@@ -24,7 +24,18 @@ const User = ( { user } ) => {
             <div className="githubDetails">
                 <div className='section-1'>
                     <div className="avatarImage">
-                        <img src = { avatar_url } className = "avatar" alt = "user avatar" />
+                        <motion.img 
+                            src = { avatar_url } 
+                            className = "avatar" 
+                            alt = "user avatar"
+                            whileHover={{ 
+                                scale: 1.01, 
+                                transition: { duration: 0.3 }}}
+                            whileTap={{ 
+                                scale: 0.95,
+                                transition: { duration: 0.3 },
+                                ease: "easeOut" }}
+                    />
                     </div>
 
                     <div className="nameLink">
@@ -51,7 +62,7 @@ const User = ( { user } ) => {
                     
                     <div>
                         <h2>Public Repos</h2>
-                        <p> {public_repos} </p>
+                        <p> { name } have {public_repos} public repositories </p>
                     </div>
 
                     <div className='socialData'>
