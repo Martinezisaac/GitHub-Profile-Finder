@@ -20,7 +20,7 @@ const User = ( { user } ) => {
     const createdDate = new Date(created_at);
 
     return (
-        <div className='content-wrapper'>
+        <div className='user-wrapper'>
             <div className="githubDetails">
                 <div className='section-1'>
                     <div className="avatarImage">
@@ -28,11 +28,11 @@ const User = ( { user } ) => {
                     </div>
 
                     <div className="nameLink">
-                        <p> { name } </p>
-                        <p> { login } </p>
+                        <p id='name'> { name } </p>
+                        <p id='login'> { login } </p>
                     </div>
 
-                    <button>
+                    <button className='visit-profile'>
                         <a href = { `https://github.com/${ login }` } target = "_blank">
                             Visit Profile
                         </a> 
@@ -40,13 +40,13 @@ const User = ( { user } ) => {
                 </div>
                 <div className='section-2'>
                     <div>
-                        <h2>Biography</h2>
-                        <p> { bio ? bio : 'This user does not have a Biography...' } </p>
+                        <h2>Bio</h2>
+                        <p> { bio ? bio : '...' } </p>
                     </div>
                     
                     <div>
                         <h2>Location</h2>
-                        <p> {location ? location : 'This user does not have a location...'} </p>
+                        <p> {location ? location : '...'} </p>
                     </div>
                     
                     <div>
@@ -55,9 +55,10 @@ const User = ( { user } ) => {
                     </div>
 
                     <div className='socialData'>
+                        <h2> Community </h2>
                         <div className='followers'> 
-                            <img src= { users } />
-                            <p> { followers } followers · { following } following</p>
+                            <img src= { users } id='users-icon'/>
+                            <p id='community'> { followers } followers · { following } following</p>
                         </div>
                     </div>
 

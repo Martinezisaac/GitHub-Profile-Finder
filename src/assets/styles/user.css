@@ -1,14 +1,19 @@
-.content-wrapper {
+.user-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0rem 8rem 1rem 8rem;
 }
 
+
 .githubDetails {
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 100%;
+
+    background-color: #0d1117;
+    border: 3px solid #3d444d;
+    border-radius: 15px;
 }
 
 .section-1 {
@@ -16,6 +21,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+    border-right: 3px solid #3d444d;
+}
+
+.section-2 {
+    padding: 2rem;
 }
 
 .avatar {
@@ -23,4 +34,65 @@
     height: 22rem;
     border-radius: 50%;
     object-fit: cover;
+}
+
+#name {
+    margin: 0.5rem 0rem 0rem 0rem;
+    justify-content: center;
+    font-family: "Menlo-Bold";
+    font-size: 1.6rem;
+    color: white;
+}
+
+#login {
+    justify-content: center;
+    text-align: center;
+    margin: 0rem 0rem 1rem 0rem;
+    font-size: 1rem;
+}
+
+.visit-profile {
+    border: 3px solid #3d444d;
+    border-radius: 15px;
+    height: 3rem;
+    width: 50%;
+    font-size: 1rem;
+    background-color: transparent;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+
+.joinedDate {
+    padding-top: 1.5rem;
+}
+
+.visit-profile:hover {
+    transform: scale(1.015);
+    background-color: #3d444d;
+}
+
+.followers {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#users-icon {
+    width: 25px;
+    height: 25px;
+}
+
+
+h2 {
+    font-family: "Menlo-Bold";
+    font-size: 1.6rem;
+    margin-bottom: 0px;
+}
+
+.user-wrapper p {
+    margin-top: 0px;
+}
+
+#community {
+    margin-top: 1rem;
 }
