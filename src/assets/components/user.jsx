@@ -1,7 +1,7 @@
 import '../styles/user.css'
 import users from '../icons/users.svg'
 import { motion } from "motion/react"
-import NotFound from './notFound';
+import NotFound from './status_components/notFound';
 import userData from '../customHooks/userData';
 
 //Componente para mostrar la informacion del usuario de Github

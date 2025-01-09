@@ -1,5 +1,5 @@
-import error from '../icons/githubGray.svg'
-import '../styles/notFound.css'
+import error from '../../icons/githubGray.svg'
+import '../../styles/notFound.css'
 import { motion } from "motion/react"
 
 //Componente para cuando la informacion es nula

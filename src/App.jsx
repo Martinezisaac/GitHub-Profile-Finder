@@ -3,7 +3,7 @@ import './App.css'
 import User from './assets/components/user'
 import Footer from './assets/components/footer'
 import Header from './assets/components/header'
-import NotFound from './assets/components/notFound'
+import NotFound from './assets/components/status_components/notFound'
 
 function App() {
   const [userData, setUserData] = useState(null);
