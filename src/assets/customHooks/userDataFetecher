@@ -31,7 +31,7 @@ const userDataFetcher = (sendData) => {
         }
     };
 
-    return {
+    return { //Devolver las propiedades necesarias para realizar la busqueda
         setUserName, //Establecer el nombre del usuario en el input de busqueda en header
         userName, //Nombre del usuario a buscar
         loading, //Estado booleando de cargar
