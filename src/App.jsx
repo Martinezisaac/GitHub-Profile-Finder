@@ -3,6 +3,7 @@ import './App.css'
 import User from './assets/components/user'
 import Footer from './assets/components/footer'
 import Header from './assets/components/header'
+import NotFound from './assets/components/notFound'
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -16,7 +17,7 @@ function App() {
 
       <Header sendData = { handleData }/>
       
-      {userData && <User user = { userData } /> }
+      {userData ? <User user = { userData } /> : <NotFound /> }
 
       <Footer />
 

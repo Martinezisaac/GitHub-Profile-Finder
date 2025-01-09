@@ -1,24 +1,31 @@
 import '../styles/user.css'
 import users from '../icons/users.svg'
 import { motion } from "motion/react"
+import NotFound from './notFound';
 
 //Componente para mostrar la informacion del usuario de Github
 const User = ( { user } ) => {
     const {
-        bio, 
-        avatar_url,
-        followers,
-        following,
-        public_repos,
-        url,
-        name,
-        created_at,
-        login,
-        location, 
-    } = user; 
+        bio, //Biografia del usuario
+        avatar_url, //Imagen del usuario en la plataforma
+        followers, //Cantidad de seguidores
+        following, //Cantidad de personas a las que sigue
+        public_repos, //Cantidad de repositorios disponibles
+        url, //
+        name, //Nombre real del usuario 
+        created_at, //Fecha de creacion de la cuenta
+        login, //Nombre de usuario en la plataforma
+        location, //Localizacion del usuario 
+        status, //Si existe una propiedad "status" entonces es porque existe un error (404 - User not found)
+    } = user; //Obtener las propiedades del objeto
 
     const createdDate = new Date(created_at);
 
+    if (status) { //Validar si se ha recibido un status
+        return (
+            <NotFound /> //Si se recibio un estatus entonces no se encontro al usuario
+        );
+    }
     return (
         <div className='user-wrapper'>
             <div className="githubDetails">
@@ -52,12 +59,12 @@ const User = ( { user } ) => {
                 <div className='section-2'>
                     <div>
                         <h2>Bio</h2>
-                        <p> { bio ? bio : '...' } </p>
+                        <p> { bio }</p>
                     </div>
                     
                     <div>
                         <h2>Location</h2>
-                        <p> {location ? location : '...'} </p>
+                        <p> { location } </p>
                     </div>
                     
                     <div>
