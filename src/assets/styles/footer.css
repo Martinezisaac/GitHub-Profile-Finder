@@ -21,12 +21,6 @@
     gap: 15px;
 }
 
-.content-one {
-    display: flex;  
-    align-items: center; 
-    justify-content: center;
-}
-
 .github-logo {
     width: 30px;
     height: 100%;
@@ -41,4 +35,38 @@ a {
     color: #c2c9d1;
     font-family: Menlo-Bold, sans-serif;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .footer-content {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .footer-wrapper {
+        display: inline;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .content-one {
+        justify-content: center;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem; 
+    }
+
+    .content-two {
+        display: none;
+    }
+
+    .github-logo {
+        width: 20px;
+        height: 100%;
+    }
+
+    .content-two p {
+        margin: 0;
+    }
 }
