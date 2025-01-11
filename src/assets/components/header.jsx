@@ -10,7 +10,7 @@ const Header = ( { sendData }) => {
         <div className="header"> 
             <div className="header-container">
                 <div className="logo-container">
-                    <img src= { github_logo } />
+                    <img src= { github_logo } className='logo' />
                     <h1>GitHub Profile Finder</h1>
                 </div>
                 <div className="search-display">
@@ -26,7 +26,6 @@ const Header = ( { sendData }) => {
                     </div>
                 </div>
             </div>
-            {loading && <div className="loading-section"><h1>Loading information...</h1></div>}
         </div>
     );
 }

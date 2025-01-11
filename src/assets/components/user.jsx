@@ -14,15 +14,13 @@ const User = ( { user } ) => {
         followers, //Cantidad de seguidores
         following, //Cantidad de personas a las que sigue
         public_repos, //Cantidad de repositorios disponibles
-        url, //
         name, //Nombre real del usuario 
         created_at, //Fecha de creacion de la cuenta
         login, //Nombre de usuario en la plataforma
         location, //Localizacion del usuario 
         status, //Si existe una propiedad "status" entonces es porque existe un error (404 - User not found)
+        createdDate,
     } = data; //Obtener las propiedades del objeto
-
-    const createdDate = new Date(created_at);
 
     if (status) { //Validar si se ha recibido un status
         return (
@@ -50,8 +48,22 @@ const User = ( { user } ) => {
                     </div>
 
                     <div className="nameLink">
-                        <p id='name'> { name } </p>
-                        <p id='login'> { login } </p>
+                        <motion.p 
+                            id='name'
+                            whileHover={{ 
+                                scale: 1.05, 
+                                transition: { duration: 0.5 }}} >
+                        { name } 
+                        </motion.p>
+
+                        <motion.p 
+                            id='login'
+                            whileHover={{ 
+                                scale: 1.05, 
+                                transition: { duration: 0.5 }}} >
+                        { login } 
+
+                        </motion.p>
                     </div>
 
                     <button className='visit-profile'>
@@ -63,12 +75,12 @@ const User = ( { user } ) => {
                 <div className='section-2'>
                     <div>
                         <h2>Bio</h2>
-                        <p> { bio }</p>
+                        <p> { bio ? bio : 'This user does not have a Bio' }</p>
                     </div>
                     
                     <div>
                         <h2>Location</h2>
-                        <p> { location } </p>
+                        <p> { location ? location : 'This user does not set a location' } </p>
                     </div>
                     
                     <div>

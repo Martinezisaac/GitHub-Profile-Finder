@@ -8,18 +8,18 @@ const userDataFetcher = (sendData) => {
     
     //Funcion para obtener la informacion del usuario de GitHub
     const fetchGitHubUsers = async () => { 
-        setLoading(true); //Indicar al usuario que la informacion se esta cargando
+        setLoading(true);
         const result = await fetch(`https://api.github.com/users/${userName}`); //Buscar los datos del username indicado
         const data = await result.json(); //Obtener los datos en formato json
         
         if (data) { //Validar si se encontraron los datos del usuario en la busqueda
-        setLoading(false); //Reiniciar el valor porque ya se encontro informacion
-        setUserName(''); //Resetear Username 
-        sendData(data); //Mandar los datos al componente padre
+            setLoading(false); //Indicar al usuario que la informacion se esta cargando
+            setUserName(''); //Resetear Username 
+            sendData(data); //Mandar los datos al componente padre
         } else { //Entonces no se encontro al usuario
-        setLoading(false); //No se encontraron los datos
-        sendData(data) //Mandar los datos al componente padre
-        return; //No retornar nada
+            setLoading(false); //No se encontraron los datos
+            sendData(data) //Mandar los datos al componente padre
+            return; //No retornar nada
         }
         console.log(data); //Imprimir los datos en consola
     }

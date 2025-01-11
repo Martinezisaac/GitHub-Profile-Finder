@@ -16,7 +16,7 @@ const userData = (sendUserData) => {
 
     const createdDate = new Date(created_at); //Obtener fecha de creacion de la cuenta de Github
 
-    return { //Devolver las porpiedades del objeto
+    return { //Devolver las propiedades del objeto
         bio, 
         avatar_url,
         followers,

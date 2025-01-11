@@ -38,9 +38,8 @@
     outline: none;
     padding: 10px; 
     border-radius: 15px; 
-    font-size: 15px;
+    font-size: clamp(0.5rem, 1rem, 1rem);
     width: 20rem;
-
     padding-left: 40px;
 }
 
@@ -53,5 +52,54 @@
 h1 {
     font-family: Menlo-Bold, sans-serif;
     font-weight: bolder;
-    font-size: 32px;
+    font-size: clamp(0.75rem, 2rem, 2rem);
+}
+
+@media (min-width: 1920px) {
+    .logo-container, .input-container {
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header-container {
+        display: inline;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .logo-container, .input-container {
+        margin: 0.5rem 1rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .input-container {
+        width: 70%;
+        padding-right: 0rem;
+    }
+
+    .input-text {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(1rem, 1.5rem, 2rem); /* Reduce aún más el tamaño */
+    }
+
+    .logo-container {
+        justify-content: center; /* Centra el logo en pantallas muy pequeñas */
+        gap: 5px; /* Reduce el espacio entre elementos */
+    }
+
+    .input-text {
+        font-size: 0.875rem;
+    }
 }

@@ -3,7 +3,7 @@ import './App.css'
 import User from './assets/components/user'
 import Footer from './assets/components/footer'
 import Header from './assets/components/header'
-import NotFound from './assets/components/status_components/notFound'
+import Welcome from './assets/components/status_components/welcome'
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -16,9 +16,7 @@ function App() {
     <div className='github-profile-container'>
 
       <Header sendData = { handleData }/>
-      
-      {userData ? <User user = { userData } /> : <NotFound /> }
-
+      { userData ? <User user = { userData } /> : <Welcome /> }
       <Footer />
 
     </div>
