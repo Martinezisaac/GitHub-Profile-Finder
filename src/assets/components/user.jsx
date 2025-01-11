@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import '../styles/user.css'
 import users from '../icons/users.svg'
 import { motion } from "motion/react"
@@ -7,7 +8,12 @@ import userData from '../customHooks/userData';
 //Componente para mostrar la informacion del usuario de Github
 const User = ( { user } ) => {
     const data = userData(user); //Mandar el objeto para obtener sus propiedades
+    const [animateKey, setAnimateKey] = useState(0); //Obtener una llave para ejecutar la animacion de fade
     
+    useEffect(() => { // Reinicia la animación incrementando el key cada que se realice una busqueda
+        setAnimateKey((prevKey) => prevKey + 1); //Actualizar la llave
+    }, [user]); // Vuelve a ejecutar cuando el prop 'user' cambia
+
     const {
         bio, //Biografia del usuario
         avatar_url, //Imagen del usuario en la plataforma
@@ -29,7 +35,7 @@ const User = ( { user } ) => {
     }
     
     return (
-        <div className='user-wrapper'>
+        <div key={animateKey} className='user-wrapper fade-in'>
             <div className="githubDetails">
                 <div className='section-1'>
                     <div className="avatarImage">
@@ -103,6 +109,6 @@ const User = ( { user } ) => {
             </div>
         </div>
     );
-}
+};
 
 export default User;

@@ -1,8 +1,21 @@
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .user-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0rem 8rem 1rem 8rem;
+    opacity: 0;
+    animation: fadeInMove 0.6s ease-out forwards;
 }
 
 .githubDetails {
