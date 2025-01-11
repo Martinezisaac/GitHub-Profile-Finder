@@ -80,7 +80,7 @@
     height: 25px;
 }
 
-h2 {
+.user-wrapper h2 {
     font-family: "Menlo-Bold";
     font-size: 1.6rem;
     margin-bottom: 0px;
@@ -92,4 +92,56 @@ h2 {
 
 #community {
     margin-top: 1rem;
+}
+
+@media (min-width: 1920px) {
+    .user-wrapper {
+        margin-left: 17rem;
+        margin-right: 17rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.8rem;
+    }
+
+    .githubDetails {
+        grid-template-columns: 1fr;
+    }
+
+    .section-1 {
+        border-right: 0px solid #3d444d;
+    }
+
+    .section-2 {
+        padding-top: 0;
+    }
+
+    .avatar {
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .user-wrapper h2 {
+        font-size: 1.4rem;
+    }
+
+    .user-wrapper p {
+        font-size: 0.9em;
+    }
+
+    #name {
+        font-size: 1.4em;
+    }
+
+    .visit-profile {
+        font-size: 0.9em;
+        height: calc(auto + 2rem);
+    }
 }

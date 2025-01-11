@@ -42,12 +42,14 @@ a {
     .footer-content {
         width: 100%;
         font-size: 0.8rem;
+        margin: 0;
     }
 
     .footer-wrapper {
         display: inline;
         flex-direction: column;
         max-width: 100%;
+        height: auto;
     }
 
     .content-one {
@@ -68,5 +70,11 @@ a {
 
     .content-two p {
         margin: 0;
+    }
+}
+
+@media(max-width: 480px) {
+    .content-one {
+        font-size: 0.9em;
     }
 }

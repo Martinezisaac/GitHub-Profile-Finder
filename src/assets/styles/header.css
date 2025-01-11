@@ -64,6 +64,12 @@ h1 {
 
 
 @media (max-width: 768px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .header-container {
         display: inline;
         flex-direction: column;
@@ -71,15 +77,17 @@ h1 {
         align-items: center;
     }
     
-
     .logo-container, .input-container {
         margin: 0.5rem 1rem;
+        justify-content: center;
         padding-left: 0;
         padding-right: 0;
     }
 
     .input-container {
-        width: 70%;
+        justify-content: center;
+        align-items: center;
+        width: 77%;
         padding-right: 0rem;
     }
 
@@ -87,19 +95,36 @@ h1 {
         width: 100%;
         max-width: none;
     }
+
+    .joinedDate p {
+        text-align: center;
+        margin: 0;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
     h1 {
         font-size: clamp(1rem, 1.5rem, 2rem); /* Reduce aún más el tamaño */
     }
 
+    .input-container {
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        padding-right: 0rem;
+    }
+
     .logo-container {
-        justify-content: center; /* Centra el logo en pantallas muy pequeñas */
-        gap: 5px; /* Reduce el espacio entre elementos */
+        justify-content: center;
+        gap: 5px; 
     }
 
     .input-text {
         font-size: 0.875rem;
+    }
+
+    .joinedDate p {
+        margin: 0;
+        text-align: center;
     }
 }
