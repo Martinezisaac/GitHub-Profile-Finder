@@ -11,6 +11,7 @@
 
 .user-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0rem 8rem 1rem 8rem;
@@ -42,8 +43,8 @@
 }
 
 .avatar {
-    width: 22rem;
-    height: 22rem;
+    width: 19rem;
+    height:19rem;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -105,6 +106,13 @@
 
 #community {
     margin-top: 1rem;
+}
+
+.repos {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 1920px) {

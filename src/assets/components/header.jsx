@@ -5,7 +5,7 @@ import search from '../icons/search.svg'
 import userDataFetcher from '../customHooks/userDataFetecher';
 
 const Header = ( { sendData }) => {
-    const { userName, setUserName, loading, handleEnter, fetchGitHubUsers } = userDataFetcher(sendData);
+    const { userName, setUserName, handleEnter, fetchGitHubUsers } = userDataFetcher(sendData);
     return (
         <div className="header"> 
             <div className="header-container">

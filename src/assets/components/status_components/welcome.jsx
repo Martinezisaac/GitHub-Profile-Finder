@@ -11,6 +11,10 @@ const Welcome = () => {
             <p>
                 - Ver que rollo con el componente error, hacerlo responsivo y agregar la animacion de fade 
             </p> 
+
+            <p>
+                html_url | description | 
+            </p>
         </div>
     );
 }

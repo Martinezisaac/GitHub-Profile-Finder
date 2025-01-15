@@ -4,16 +4,13 @@ import users from '../icons/users.svg'
 import { motion } from "motion/react"
 import NotFound from './status_components/notFound';
 import userData from '../customHooks/userData';
+import Repos from './repos';
 
 //Componente para mostrar la informacion del usuario de Github
 const User = ( { user } ) => {
     const data = userData(user); //Mandar el objeto para obtener sus propiedades
     const [animateKey, setAnimateKey] = useState(0); //Obtener una llave para ejecutar la animacion de fade
     
-    useEffect(() => { // Reinicia la animación incrementando el key cada que se realice una busqueda
-        setAnimateKey((prevKey) => prevKey + 1); //Actualizar la llave
-    }, [user]); // Vuelve a ejecutar cuando el prop 'user' cambia
-
     const {
         bio, //Biografia del usuario
         avatar_url, //Imagen del usuario en la plataforma
@@ -21,12 +18,16 @@ const User = ( { user } ) => {
         following, //Cantidad de personas a las que sigue
         public_repos, //Cantidad de repositorios disponibles
         name, //Nombre real del usuario 
-        created_at, //Fecha de creacion de la cuenta
         login, //Nombre de usuario en la plataforma
         location, //Localizacion del usuario 
         status, //Si existe una propiedad "status" entonces es porque existe un error (404 - User not found)
-        createdDate,
+        createdDate, //Fecha de creacion de la cuenta
+        repos_url
     } = data; //Obtener las propiedades del objeto
+
+    useEffect(() => { // Reinicia la animación incrementando el key cada que se realice una busqueda
+        setAnimateKey((prevKey) => prevKey + 1); //Actualizar la llave
+    }, [user]); // Vuelve a ejecutar cuando el prop 'user' cambia
 
     if (status) { //Validar si se ha recibido un status
         return (
@@ -107,7 +108,12 @@ const User = ( { user } ) => {
                     </div>
                 </div>
             </div>
+
+            <div className='repos'>
+                <Repos repourl = { repos_url }/>
+            </div>
         </div>
+
     );
 };
 

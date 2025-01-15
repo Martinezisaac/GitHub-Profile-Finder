@@ -4,6 +4,7 @@ import User from './assets/components/user'
 import Footer from './assets/components/footer'
 import Header from './assets/components/header'
 import Welcome from './assets/components/status_components/welcome'
+import Repos from './assets/components/repos'
 
 function App() {
   const [userData, setUserData] = useState(null);
