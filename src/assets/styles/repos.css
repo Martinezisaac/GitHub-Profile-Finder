@@ -1,8 +1,55 @@
 .reposData-wrapper {
-    margin: 3rem;
+    margin: 3rem 0rem 3rem 0rem;
+    border: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #0d1117;
+    border: 1.5px solid #3d444d;
+    border-radius: 15px;
+}
+
+.reposData-wrapper ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-align: left;
+}
+
+.repos-wrapper {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+.repos-wrapper a {
+    text-decoration: none;
+}
+
+.repos-wrapper a:hover {
+    text-decoration: underline solid #4493f8;
+}
+
+.repos-wrapper h2 {
+    color: #4493f8;
+}
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 1.5px solid #3d444d;
+}
+
+.reposcontent-wrapper #description {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.reposcontent-wrapper {
+    margin: 0px;
+    border: 0px;
+    padding: 0px 50px 0px 50px; 
 }
 
 ul {

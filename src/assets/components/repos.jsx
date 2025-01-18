@@ -18,8 +18,6 @@ const Repos = ({ repourl }) => {
     }, [repourl])
 
     return(
-
-
         <div className='reposData-wrapper'>
             <InfiniteScroll
                 dataLength={reposData.length} //This is important field to render the next data
@@ -36,23 +34,26 @@ const Repos = ({ repourl }) => {
                 <ul>
                     {reposData.map((repo) => (
                         <div className='repos-wrapper'>
-                            <li key={repo.id}>
-                                <h2> { repo.name } </h2>
-                                <p> { repo.description } </p>
+                            <div className='reposcontent-wrapper'>
+                                <li key={repo.id}>
+                                    <a href= {repo.html_url} target = "_blank"> <h2> { repo.name } </h2> </a>
+                                    <p id='description'> { repo.description } </p>
 
-                                { repo.topics && repo.topics.length > 0 && (
-                                    <p> 
-                                    { repo.topics.map((topic, index) => (
-                                        <p> {topic} </p>
-                                    ))}
-                                    </p>
-                                )}
+                                    { repo.topics && repo.topics.length > 0 && (
+                                        <p> 
+                                        { repo.topics.map((topic, index) => (
+                                            <p> {topic} </p>
+                                        ))}
+                                        </p>
+                                    )}
 
-                                <p> { repo.language } </p>
-                                <p> <a href= {repo.homepage} >  { repo.homepage } </a> </p>
-                                <p> { repo.updated_at }</p>
-                                { repo.license && <p> { repo.license.name } </p>}
-                            </li>
+                                    <p> { repo.language } </p>
+                                    <p> <a href= {repo.homepage} >  { repo.homepage } </a> </p>
+                                    <p> { repo.updated_at }</p>
+                                    { repo.license && <p> { repo.license.name } </p>}
+                                </li>
+                            </div>
+                        <hr></hr>
                         </div>
                     ))}
                 </ul>
@@ -62,3 +63,4 @@ const Repos = ({ repourl }) => {
 } 
 
 export default Repos
+

@@ -25,7 +25,7 @@
     width: 100%;
 
     background-color: #0d1117;
-    border: 3px solid #3d444d;
+    border: 1.5px solid #3d444d;
     border-radius: 15px;
 }
 
@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    border-right: 3px solid #3d444d;
+    border-right: 1.5px solid #3d444d;
 }
 
 .section-2 {
@@ -65,7 +65,7 @@
 }
 
 .visit-profile {
-    border: 3px solid #3d444d;
+    border: 1.5px solid #3d444d;
     border-radius: 15px;
     height: 3rem;
     width: 50%;
