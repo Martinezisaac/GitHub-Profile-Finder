@@ -110,9 +110,12 @@
 
 .repos {
     margin-top: 1rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: fadeInMove 0.6s ease-out forwards;
 }
 
 @media (min-width: 1920px) {

@@ -2,9 +2,8 @@
     margin: 3rem 0rem 3rem 0rem;
     border: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    overflow: hidden;
     background-color: #0d1117;
     border: 1.5px solid #3d444d;
     border-radius: 15px;
@@ -21,6 +20,7 @@
     margin: 0px;
     border: 0px;
     padding: 0px;
+    width: 100%;
 }
 
 .repos-wrapper a {
@@ -33,6 +33,24 @@
 
 .repos-wrapper h2 {
     color: #4493f8;
+}
+
+.topics-wrapper {
+    display: flex;
+    gap: 0.8rem;
+}
+
+#topics {
+    color: #4493f8;
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 15px;
+    background-color: #121d2f;
+    user-select: none;
+}
+
+#topics:hover {
+    background-color: #1f6feb;
+    color: white;
 }
 
 hr {

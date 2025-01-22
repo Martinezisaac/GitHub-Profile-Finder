@@ -40,15 +40,20 @@ const Repos = ({ repourl }) => {
                                     <p id='description'> { repo.description } </p>
 
                                     { repo.topics && repo.topics.length > 0 && (
-                                        <p> 
-                                        { repo.topics.map((topic, index) => (
-                                            <p> {topic} </p>
-                                        ))}
-                                        </p>
+                                            <p> 
+                                                <div className='topics-wrapper'>
+                                                    { repo.topics.map((topic, index) => (
+                                                        <div className='topics-style'>
+                                                            <p id='topics'> {topic} </p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            
+                                            </p>
                                     )}
 
                                     <p> { repo.language } </p>
-                                    <p> <a href= {repo.homepage} >  { repo.homepage } </a> </p>
+                                    <p> <a href= {repo.homepage} target = "_blank">  { repo.homepage } </a> </p>
                                     <p> { repo.updated_at }</p>
                                     { repo.license && <p> { repo.license.name } </p>}
                                 </li>
