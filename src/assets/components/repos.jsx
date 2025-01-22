@@ -54,7 +54,18 @@ const Repos = ({ repourl }) => {
 
                                     <p> { repo.language } </p>
                                     <p> <a href= {repo.homepage} target = "_blank">  { repo.homepage } </a> </p>
-                                    <p> { repo.updated_at }</p>
+                                    <p>
+                                        {(() => { // Crear una funcion flecha para hacer conversiones de horarios
+                                            const date = new Date(repo.updated_at); // Convertir la fecha ISO a un objeto Date
+                                            const formattedDate = date.toLocaleDateString("en-US", {
+                                            day: "numeric",    // Día como número
+                                            month: "long",     // Mes en formato largo (ej. "enero")
+                                            year: "numeric",   // Año completo
+                                            });
+
+                                            return `Updated on ${formattedDate}`; // Retornar la fecha formateada
+                                        })()}
+                                    </p>
                                     { repo.license && <p> { repo.license.name } </p>}
                                 </li>
                             </div>

@@ -114,8 +114,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     opacity: 0;
     animation: fadeInMove 0.6s ease-out forwards;
+}
+
+.repos h1 {
+    text-align: start;
+    padding-bottom: 0;
 }
 
 @media (min-width: 1920px) {

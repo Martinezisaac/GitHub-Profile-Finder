@@ -108,7 +108,7 @@ const User = ( { user } ) => {
                     </div>
                 </div>
             </div>
-
+            
             <div className='repos'>
                 <Repos repourl = { repos_url }/>
             </div>
