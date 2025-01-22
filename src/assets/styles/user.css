@@ -119,9 +119,24 @@
     animation: fadeInMove 0.6s ease-out forwards;
 }
 
-.repos h1 {
-    text-align: start;
-    padding-bottom: 0;
+.repo-sideinfo {
+    display: flex;
+    justify-content: flex-start;
+    gap:2.5rem; 
+}
+
+#license-image {
+    width: 20px;
+    height: auto;
+}
+
+.license-wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.repo-sideinfo p {
+    margin: 0;
 }
 
 @media (min-width: 1920px) {

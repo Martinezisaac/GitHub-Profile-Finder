@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import '../styles/repos.css'
+import license from '../icons/license.svg'
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Repos = ({ repourl }) => {
@@ -52,7 +53,6 @@ const Repos = ({ repourl }) => {
                                             </p>
                                     )}
 
-                                    <p> { repo.language } </p>
                                     <p> <a href= {repo.homepage} target = "_blank">  { repo.homepage } </a> </p>
                                     <p>
                                         {(() => { // Crear una funcion flecha para hacer conversiones de horarios
@@ -62,11 +62,20 @@ const Repos = ({ repourl }) => {
                                             month: "long",     // Mes en formato largo (ej. "enero")
                                             year: "numeric",   // Año completo
                                             });
-
                                             return `Updated on ${formattedDate}`; // Retornar la fecha formateada
                                         })()}
                                     </p>
-                                    { repo.license && <p> { repo.license.name } </p>}
+
+                                    <div className='repo-sideinfo'>
+                                        { repo.language && <p>{ repo.language }</p>}
+                                        { repo.license && (
+                                            <div className='license-wrapper'>
+                                            <img id='license-image' src = { license } /> 
+                                            <p> { repo.license.name } </p>
+                                            </div>
+                                        )}
+                                    </div>
+
                                 </li>
                             </div>
                         <hr></hr>
