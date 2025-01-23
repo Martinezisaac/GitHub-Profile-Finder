@@ -53,7 +53,9 @@ const Repos = ({ repourl }) => {
                                             </p>
                                     )}
 
-                                    <p> <a href= {repo.homepage} target = "_blank">  { repo.homepage } </a> </p>
+                                    <p id='repohomepage'> { repo.homepage && (
+                                        <a href= { repo.homepage } target='_blank'> Homepage: { repo.homepage } </a>
+                                    )}</p>
                                     <p>
                                         {(() => { // Crear una funcion flecha para hacer conversiones de horarios
                                             const date = new Date(repo.updated_at); // Convertir la fecha ISO a un objeto Date
@@ -74,6 +76,10 @@ const Repos = ({ repourl }) => {
                                             <p> { repo.license.name } </p>
                                             </div>
                                         )}
+                                    </div>
+
+                                    <div className='repo-forked'>
+                                        { repo.fork && <p className='repo-forked'>This repository was forked</p>}
                                     </div>
 
                                 </li>

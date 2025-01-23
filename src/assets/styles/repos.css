@@ -37,6 +37,7 @@
 
 .topics-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.8rem;
 }
 
@@ -70,10 +71,30 @@ hr {
     padding: 0px 50px 0px 50px; 
 }
 
+.repo-forked {
+    padding-top: 0.4rem;
+    font-size: 0.9em;
+    color: #4493f8;
+}
+
+#repohomepage {
+    color: #4493f8;
+}
+
 ul {
     list-style-type: none;
 }
 
 li {
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .reposcontent-wrapper {
+        padding: 1.8rem; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    #topics {
+        font-size: 0.85rem; /* Ajustar el tamaño del texto en dispositivos pequeños */
+    }
 }
