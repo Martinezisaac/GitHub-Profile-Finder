@@ -119,6 +119,25 @@
     animation: fadeInMove 0.6s ease-out forwards;
 }
 
+.header-repos {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 7rem 0rem 1rem 0rem;
+    gap: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+#img-title {
+    width: 2.5rem;
+    height: 100%;
+}
+
+#repos-title {
+    margin: 0;
+}
+
 .repo-sideinfo {
     display: flex;
     justify-content: flex-start;

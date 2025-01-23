@@ -37,7 +37,9 @@ const Repos = ({ repourl }) => {
                         <div className='repos-wrapper'>
                             <div className='reposcontent-wrapper'>
                                 <li key={repo.id}>
-                                    <a href= {repo.html_url} target = "_blank"> <h2> { repo.name } </h2> </a>
+                                    <a href= {repo.html_url} target = "_blank"> 
+                                        <h2 className='repo-name'> { repo.name } </h2> 
+                                    </a>
                                     <p id='description'> { repo.description } </p>
 
                                     { repo.topics && repo.topics.length > 0 && (
