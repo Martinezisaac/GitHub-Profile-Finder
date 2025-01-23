@@ -109,11 +109,6 @@ const User = ( { user } ) => {
                     </div>
                 </div>
             </div>
-            
-            <div className='header-repos'>
-                <img id='img-title' src= { developer } />
-                <h2 id='repos-title'> { name } public repositories</h2>
-            </div>
 
             <div className='repos'>
                 <Repos repourl = { repos_url }/>

@@ -4,8 +4,6 @@
     padding: 0;
     width: 100%;
     overflow: hidden;
-    background-color: #0d1117;
-    border: 1.5px solid #3d444d;
     border-radius: 15px;
 }
 
@@ -71,8 +69,10 @@
 }
 
 hr {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border: 1.5px solid #3d444d;
 }
 
@@ -89,8 +89,13 @@ hr {
 
 .repo-forked {
     padding-top: 0.4rem;
+    padding-bottom: 0.3rem;
     font-size: 0.9em;
     color: #4493f8;
+}
+
+.repo-sideinfo {
+    padding-bottom: 0.3rem;
 }
 
 #repohomepage {
@@ -107,10 +112,21 @@ li {
 
 @media (max-width: 768px) {
     .reposcontent-wrapper {
-        padding: 1.8rem; /* Reducir el padding en pantallas pequeñas */
+        padding: 0.2rem 1.8rem 0.2rem 1.8rem; /* Reducir el padding en pantallas pequeñas */
     }
 
     #topics {
         font-size: 0.85rem; /* Ajustar el tamaño del texto en dispositivos pequeños */
+    }
+}
+
+@media (max-width: 380px) {
+    .reposcontent-wrapper {
+        padding: 0.3rem; /* Reducir el padding en pantallas pequeñas */
+    }
+    
+    hr {
+        margin-top: 0.10em;
+        margin-bottom: 0.10em;
     }
 }

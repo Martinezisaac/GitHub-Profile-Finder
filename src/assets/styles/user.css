@@ -24,8 +24,8 @@
     grid-template-columns: 1fr 2fr;
     width: 100%;
 
-    background-color: #0d1117;
-    border: 1.5px solid #3d444d;
+    background-color: #010409;
+    border: 2.5px solid #3d444d;
     border-radius: 15px;
 }
 
@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    border-right: 1.5px solid #3d444d;
+    border-right: 2.5px solid #3d444d;
 }
 
 .section-2 {
@@ -109,7 +109,7 @@
 }
 
 .repos {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -121,7 +121,7 @@
 
 .header-repos {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     margin: 7rem 0rem 1rem 0rem;
     gap: 1rem;
@@ -130,7 +130,7 @@
 }
 
 #img-title {
-    width: 2.5rem;
+    width: 4rem;
     height: 100%;
 }
 
