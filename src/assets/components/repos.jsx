@@ -40,7 +40,7 @@ const Repos = ({ repourl }) => {
                                     <a href= {repo.html_url} target = "_blank"> 
                                         <h2 className='repo-name'> { repo.name } </h2> 
                                     </a>
-                                    <p id='description'> { repo.description } </p>
+                                    { repo.description && <p id='description'> { repo.description } </p>}
 
                                     { repo.topics && repo.topics.length > 0 && (
                                             <p> 
