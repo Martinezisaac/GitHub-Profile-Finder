@@ -68,6 +68,21 @@
     color: white;
 }
 
+#license-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#repo-language {
+    color: #ffffff;
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 15px;
+    border: 2px solid #39404b;
+    background-color: #262c36;
+    user-select: none;
+}
+
 hr {
     margin-left: 50px;
     margin-right: 50px;

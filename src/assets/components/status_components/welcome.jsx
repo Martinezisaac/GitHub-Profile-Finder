@@ -9,12 +9,10 @@ const Welcome = () => {
             </p>
 
             <p>
-                - Ver que rollo con el componente error, hacerlo responsivo y agregar la animacion de fade 
+                - responsividad para movil y laptop y tablets
+                - infinite scroller
+                - barra de busqueda (mejorar el diseño para evitar que se cuatrapie)
             </p> 
-
-            <p>
-                html_url | description | 
-            </p>
         </div>
     );
 }

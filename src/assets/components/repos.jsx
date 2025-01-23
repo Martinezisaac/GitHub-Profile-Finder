@@ -71,11 +71,11 @@ const Repos = ({ repourl }) => {
                                     </p>
 
                                     <div className='repo-sideinfo'>
-                                        { repo.language && <p>{ repo.language }</p>}
+                                        { repo.language && <p id='repo-language'>{ repo.language }</p>}
                                         { repo.license && (
                                             <div className='license-wrapper'>
                                             <img id='license-image' src = { license } /> 
-                                            <p> { repo.license.name } </p>
+                                            <p id='license-name'> { repo.license.name } </p>
                                             </div>
                                         )}
                                     </div>
