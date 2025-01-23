@@ -1,3 +1,7 @@
+.header {
+    margin-bottom: 1rem;
+}
+
 .header-container {
     overflow: hidden;;
     display: flex;
