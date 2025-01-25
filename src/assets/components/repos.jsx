@@ -28,7 +28,6 @@ const Repos = ({ repourl }) => {
     }
   };
 
-
   // Cada vez que la URL cambia se ejecuta el useEffect para asignar paginacion y realizar la busqueda de nuevos repositorios
   useEffect(() => {
     if (!repourl) return; // Verifica que exista una URL, en caso contrario no realiza la busqueda
@@ -45,7 +44,7 @@ const Repos = ({ repourl }) => {
         next={fetchRepos} //Función para buscar mas repositorios
         hasMore={hasMore} // Validar si existen mas repositorios que mostrar
         loader={<div className="infiniteScroll-loader">
-            <span class="loader"></span>
+            <span className="loader"></span>
         </div>
         } // Muestra un mensaje mientras carga
         endMessage={
