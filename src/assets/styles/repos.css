@@ -1,5 +1,5 @@
 .reposData-wrapper {
-    margin: 0rem 0rem 3rem 0rem;
+    margin: 0rem 0rem 1rem 0rem;
     border: 0;
     padding: 0;
     width: 100%;
@@ -123,6 +123,41 @@ ul {
 
 li {
     text-decoration: none;
+}
+
+.infiniteScroll-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+.endMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
 }
 
 @media (max-width: 768px) {
