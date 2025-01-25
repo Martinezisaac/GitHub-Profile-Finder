@@ -13,6 +13,7 @@ const userData = (sendUserData) => {
         location, //Localizacion del usuario 
         status, //Si existe una propiedad "status" entonces es porque existe un error (404 - User not found)
         repos_url, //Informacion de los repositorios
+        documentation_url //URL de la documentacion, entonces el usuario intento bucar mas de 60 usuarios desde la misma IP en menos de una hora
     } = sendUserData; //Obtener las propiedades del objeto
 
     const createdDate = new Date(created_at); //Obtener fecha de creacion de la cuenta de Github
@@ -29,7 +30,8 @@ const userData = (sendUserData) => {
         location,
         createdDate,
         status,
-        repos_url
+        repos_url,
+        documentation_url
     }
 }
 

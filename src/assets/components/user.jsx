@@ -22,6 +22,7 @@ const User = ( { user } ) => {
         login, //Nombre de usuario en la plataforma
         location, //Localizacion del usuario 
         status, //Si existe una propiedad "status" entonces es porque existe un error (404 - User not found)
+        documentation_url, //URL de la documentacion, entonces el usuario intento bucar mas de 60 usuarios desde la misma IP en menos de una hora
         createdDate, //Fecha de creacion de la cuenta
         repos_url
     } = data; //Obtener las propiedades del objeto
@@ -34,6 +35,10 @@ const User = ( { user } ) => {
         return (
             <NotFound /> //Si se recibio un estatus entonces no se encontro al usuario
         );
+    } else if (documentation_url){
+        return (
+            <p> Ya buscaste mucho hijo, aqui falta hacer un componente bien chido</p>
+        )
     }
     
     return (
