@@ -4,6 +4,13 @@ GitHub Profile Finder es una aplicación desarrollada con React que permite a lo
 
 ---
 
+# Visualización
+## Página de inicio
+![Texto alternativo](./src/assets/images/main-page.jpg)
+
+## Repositorios del usuario
+![Texto alternativo](./src/assets/images/repos-page.jpg)
+
 ## Características principales
 
 - **Búsqueda de usuarios de GitHub**:
