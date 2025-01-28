@@ -17,7 +17,7 @@
 .repo-name {
     display: inline-block;
     border-radius: 15px;
-    padding: 0.3rem 0rem 0.3rem 0rem; /* Añadir padding para el estado inicial */
+    padding: 0.3rem 0rem 0.3rem 0rem;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
 }
 
@@ -25,9 +25,9 @@
     color: #4493f8;
     border-radius: 15px;
     background-color: #121d2f;
-    transform: scale(1.015); /* Escala el texto */
-    padding: 0.3rem 1rem 0.3rem 1rem; /* Mantener el mismo padding que en el estado normal */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+    transform: scale(1.015);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    box-sizing: border-box;
 }
 
 .repos-wrapper {
@@ -44,7 +44,7 @@
     transition: all .4s;
 }
 
-.repos-list:hover .repos-wrapper{
+.repos-list:hover .repos-wrapper {
     opacity: .9;
     filter: blur(2px);
 }
@@ -117,7 +117,7 @@ hr {
 .reposcontent-wrapper {
     margin: 0px;
     border: 0px;
-    padding: 0px 50px 0px 50px; 
+    padding: 0px 50px 0px 50px;
 }
 
 .repo-forked {
@@ -161,16 +161,16 @@ li {
     display: inline-block;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-    }
+}
 
-    @keyframes rotation {
+@keyframes rotation {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
-    } 
+}
 
 .endMessage {
     display: flex;
@@ -179,22 +179,33 @@ li {
     padding-top: 1rem;
 }
 
+/* Desactivar hover en pantallas pequeñas */
 @media (max-width: 768px) {
     .reposcontent-wrapper {
-        padding: 0.2rem 1.8rem 0.2rem 1.8rem; /* Reducir el padding en pantallas pequeñas */
+        padding: 0.2rem 1.8rem 0.2rem 1.8rem;
     }
 
     #topics {
-        font-size: 0.85rem; /* Ajustar el tamaño del texto en dispositivos pequeños */
+        font-size: 0.85rem;
+    }
+
+    .repos-list .repos-wrapper {
+        opacity: 1 !important;
+        filter: none !important;
     }
 }
 
 @media (max-width: 380px) {
     .reposcontent-wrapper {
-        padding: 0rem 2rem 0rem 2rem; /* Reducir el padding en pantallas pequeñas */
+        padding: 0rem 2rem 0rem 2rem;
     }
 
     .user-wrapper {
         margin-bottom: 0px;
+    }
+
+    .repos-list .repos-wrapper {
+        opacity: 1 !important;
+        filter: none !important;
     }
 }
