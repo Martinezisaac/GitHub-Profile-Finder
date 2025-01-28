@@ -210,3 +210,31 @@
         height: calc(auto + 2rem);
     }
 }
+
+@media (max-width: 380px) { /* Movil */
+    .user-wrapper {
+        margin: 2rem;
+    }
+
+    .avatar {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .user-wrapper h2 {
+        font-size: 1.2rem;
+    }
+
+    .user-wrapper p {
+        font-size: 0.8em;
+    }
+
+    #name {
+        font-size: 1.2em;
+    }
+
+    .visit-profile {
+        font-size: 0.8em;
+        height: calc(auto + 2rem);
+    }
+}

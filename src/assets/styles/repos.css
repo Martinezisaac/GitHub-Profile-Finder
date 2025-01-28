@@ -191,11 +191,10 @@ li {
 
 @media (max-width: 380px) {
     .reposcontent-wrapper {
-        padding: 0.3rem; /* Reducir el padding en pantallas pequeñas */
+        padding: 0rem 2rem 0rem 2rem; /* Reducir el padding en pantallas pequeñas */
     }
-    
-    hr {
-        margin-top: 0.10em;
-        margin-bottom: 0.10em;
+
+    .user-wrapper {
+        margin-bottom: 0px;
     }
 }

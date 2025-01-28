@@ -11,7 +11,7 @@ const Header = ( { sendData }) => {
             <div className="header-container">
                 <div className="logo-container">
                     <img src= { github_logo } className='logo' />
-                    <h1>GitHub Profile Finder</h1>
+                    <h1 id='github-logo'>GitHub Profile Finder</h1>
                 </div>
                 <div className="search-display">
                     <div className='input-container'>
