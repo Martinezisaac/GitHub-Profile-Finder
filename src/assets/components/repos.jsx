@@ -7,34 +7,38 @@ const Repos = ({ repourl }) => {
   const [reposData, setReposData] = useState([]);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
+  const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN; //Obtener el token de la API de Github
 
-  const fetchRepos = async () => {
+  const fetchRepos = async () => { //Funcion para buscar los repostiorios de la API de Github
     try {
-      const resultRepos = await fetch(`${repourl}?page=${page}&per_page=10`); //Realizar la busqueda mediante la API de Github y asignar paginacion por cantidad de proyectos (por cada 10 proyectos existe una nueva pagina)
-      const repos = await resultRepos.json(); //Convertir los resultados en un objeto JSON
+        const resultRepos = await fetch(`${repourl}?page=${page}&per_page=10`, { //Realizar la busqueda limitando la paginacion a 10 repositorios antes de empezar a buscar mas (esto con el fin de no cargar todos los repositorios de golpe)
+          headers: { //Establecer autorizacion para realizar mas de 60 busquedas con la API de Github mediante un Token
+            Authorization: `Bearer ${GITHUB_TOKEN}`, //Token personal de Github
+          },
+        }); //Realizar la busqueda mediante la API de Github y asignar paginacion por cantidad de proyectos (por cada 10 proyectos existe una nueva pagina)
+        
+        const repos = await resultRepos.json(); //Convertir los resultados en un objeto JSON
 
-      if (repos.length === 0) { //Validar la longitud de repositorios
-        setHasMore(false); //Entonces ya no existen mas repositorios para mostrar
-        return;
-      }
+        if (repos.length === 0) { //Validar la longitud de repositorios
+          setHasMore(false); //Entonces ya no existen mas repositorios para mostrar
+        }
 
-      setReposData((prevRepos) => [...prevRepos, ...repos]); //Agregar los repositorios al estado actual existente
+        setReposData((prevRepos) => [...prevRepos, ...repos]); //Agregar los repositorios al estado actual existente
+        // console.log("GitHub Token:", import.meta.env.VITE_GITHUB_TOKEN); //Revisar que la importacion del token sea correcta
+        setPage((prevPage) => prevPage + 1); //Incrementar la paginacion, solicitando mas repositorios 
 
-      // Incrementa el número de página para la próxima llamada
-      setPage((prevPage) => prevPage + 1); //Incrementar la paginacion
     } catch (error) { //Atrapar el error (el manejo de error tambien fue validado previamente para mostrar un componente de error en especifico)
-      console.error("Error fetching repositories:", error); //Entonces existe un error 
-      setHasMore(false); //Desactiva el scroll infinito en caso de error
+        console.error("Error fetching repositories:", error); //Entonces existe un error 
+        setHasMore(false); //Desactiva el scroll infinito en caso de error
     }
   };
 
-  // Cada vez que la URL cambia se ejecuta el useEffect para asignar paginacion y realizar la busqueda de nuevos repositorios
   useEffect(() => {
     if (!repourl) return; // Verifica que exista una URL, en caso contrario no realiza la busqueda
     setReposData([]); // Limpia los repositorios al cambiar de URL
     setPage(1); // Reinicia la paginación
     setHasMore(true); // Activar el scroll infinito
-    fetchRepos(); // Carga los primeros repositorios
+    // fetchRepos(); // Carga los primeros repositorios
   }, [repourl]); //Asignar el efecto
 
   return (
@@ -49,7 +53,7 @@ const Repos = ({ repourl }) => {
         } // Muestra un mensaje mientras carga
         endMessage={
           <p className="endMessage">
-            <b>Yay! You have seen it all</b>
+            <b>Yay! You have seen all {reposData.length} repositories</b>
           </p>
         }
         pullDownToRefreshThreshold={5}
