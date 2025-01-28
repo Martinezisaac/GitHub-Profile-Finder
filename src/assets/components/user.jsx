@@ -5,6 +5,7 @@ import { motion } from "motion/react"
 import NotFound from './status_components/notFound';
 import userData from '../customHooks/userData';
 import Repos from './repos';
+import ExcededTrys from './status_components/excededTrys';
 
 //Componente para mostrar la informacion del usuario de Github
 const User = ( { user } ) => {
@@ -36,7 +37,7 @@ const User = ( { user } ) => {
         );
     } else if (documentation_url){
         return (
-            <p> Ya buscaste mucho hijo, aqui falta hacer un componente bien chido</p>
+            <ExcededTrys />
         )
     }
     

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "../styles/repos.css";
 import license from "../icons/license.svg";
 import InfiniteScroll from "react-infinite-scroll-component";
+import NotFound from "./status_components/notFound";
+import ExcededTrys from "./status_components/excededTrys";
 
 const Repos = ({ repourl }) => {
   const [reposData, setReposData] = useState([]);
@@ -24,11 +26,9 @@ const Repos = ({ repourl }) => {
         }
 
         setReposData((prevRepos) => [...prevRepos, ...repos]); //Agregar los repositorios al estado actual existente
-        // console.log("GitHub Token:", import.meta.env.VITE_GITHUB_TOKEN); //Revisar que la importacion del token sea correcta
         setPage((prevPage) => prevPage + 1); //Incrementar la paginacion, solicitando mas repositorios 
 
     } catch (error) { //Atrapar el error (el manejo de error tambien fue validado previamente para mostrar un componente de error en especifico)
-        console.error("Error fetching repositories:", error); //Entonces existe un error 
         setHasMore(false); //Desactiva el scroll infinito en caso de error
     }
   };
