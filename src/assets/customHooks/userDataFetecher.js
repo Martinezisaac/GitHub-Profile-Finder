@@ -3,7 +3,7 @@ import { useState } from 'react';
 //Realizar la busqueda del usuario mediante la API de github
 const userDataFetcher = (sendData) => {
 
-    const [userName, setUserName] = useState('') //Nombre del usuario de Github
+    const [userName, setUserName] = useState('martinezisaac') //Nombre del usuario de Github
     
     //Funcion para obtener la informacion del usuario de GitHub
     const fetchGitHubUsers = async () => { 
