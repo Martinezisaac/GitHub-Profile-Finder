@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/user.css'
 import users from '../icons/users.svg'
-import developer from '../icons/developer.svg'
 import { motion } from "motion/react"
 import NotFound from './status_components/notFound';
 import userData from '../customHooks/userData';

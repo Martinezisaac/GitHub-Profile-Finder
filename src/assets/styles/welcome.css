@@ -1,0 +1,85 @@
+/* Estilos generales */
+.welcome-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.info-wrapper {
+    max-width: 800px; /* Establece un tamaño máximo para que no ocupe toda la pantalla */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p#homepage-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#homepage-text b {
+    display: block;
+    margin: 3rem 0;
+}
+
+/* Pantallas de hasta 1024px (tabletas) */
+@media (max-width: 1024px) {
+    .welcome-wrapper {
+        padding: 15px;
+    }
+
+    .info-wrapper {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Ajustamos el tamaño del título */
+    }
+
+    p#homepage-text {
+        font-size: 1rem; /* Ajustamos el tamaño del texto */
+    }
+}
+
+/* Pantallas de hasta 768px (móviles) */
+@media (max-width: 768px) {
+    .welcome-wrapper {
+        padding: 10px;
+    }
+
+    .info-wrapper {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Hacemos el título más pequeño en pantallas móviles */
+    }
+
+    p#homepage-text {
+        font-size: 0.9rem; /* Reducimos el tamaño del texto */
+    }
+
+    b {
+        font-size: 0.9rem; /* Reducimos el tamaño de los textos en negrita */
+    }
+}
+
+/* Pantallas de hasta 480px (móviles muy pequeños) */
+@media (max-width: 480px) {
+    .welcome-wrapper {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.6rem; /* Título aún más pequeño */
+    }
+
+    p#homepage-text {
+        font-size: 0.85rem; /* Texto aún más pequeño */
+    }
+}

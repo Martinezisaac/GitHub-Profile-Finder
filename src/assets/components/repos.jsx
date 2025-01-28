@@ -61,7 +61,7 @@ const Repos = ({ repourl }) => {
             
           </p>
         }
-        pullDownToRefreshThreshold={5}
+        pullDownToRefreshThreshold={15}
         id="scrollableDiv"
       >
         <ul className="repos-list">

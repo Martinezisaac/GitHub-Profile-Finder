@@ -18,7 +18,7 @@ const NotFound = () => {
                     transition: { duration: 0.3 },
                     ease: "easeOut" }}
             />
-            <h1> ERROR 404</h1>
+            <h1> ERROR 404 </h1>
         </div>
         <div className='error-2'>
             <p>The user you try to find does not exist...</p>
