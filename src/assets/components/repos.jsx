@@ -53,12 +53,18 @@ const Repos = ({ repourl }) => {
         } // Muestra un mensaje mientras carga
         endMessage={
           <p className="endMessage">
-            <b>Yay! You have seen all {reposData.length} repositories</b>
+            {reposData.length > 0 ? (
+              <b>You have seen all {reposData.length} public repositories</b>
+            ) : (
+              null
+            )}
+            
           </p>
         }
         pullDownToRefreshThreshold={5}
+        id="scrollableDiv"
       >
-        <ul>
+        <ul className="repos-list">
           {reposData.map((repo, index) => (
             <div className="repos-wrapper" key={`${repo.id}-${index}`}>
               <div className="reposcontent-wrapper">
@@ -114,7 +120,6 @@ const Repos = ({ repourl }) => {
                   </div>
                 </li>
               </div>
-              <hr></hr>
             </div>
           ))}
         </ul>

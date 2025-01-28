@@ -35,6 +35,22 @@
     border: 0px;
     padding: 0px;
     width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    background-color: #010409;
+    transition: all .4s;
+}
+
+.repos-list:hover .repos-wrapper{
+    opacity: .9;
+    filter: blur(2px);
+}
+
+.repos-list .repos-wrapper:hover {
+    opacity: 1;
+    filter: blur(0px);
 }
 
 .repos-wrapper a {
@@ -61,6 +77,7 @@
     border-radius: 15px;
     background-color: #121d2f;
     user-select: none;
+    margin-bottom: 0px;
 }
 
 #topics:hover {
@@ -115,6 +132,7 @@ hr {
 
 #repohomepage {
     color: #4493f8;
+    margin-top: 1rem;
 }
 
 ul {
