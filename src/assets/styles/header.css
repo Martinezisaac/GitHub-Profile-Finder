@@ -44,9 +44,9 @@
 }
 
 .input-text {
-    background: none;
-    border: 1.5px solid #353c44;
-    outline: none;
+    color: white;
+    background: #0d1117;
+    border: 2px solid #353c44;
     padding: 10px; 
     border-radius: 15px; 
     font-size: clamp(0.5rem, 1rem, 1rem);
