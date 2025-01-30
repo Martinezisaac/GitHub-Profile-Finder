@@ -1,11 +1,4 @@
 /* Estilos generales */
-.welcome-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
 .info-wrapper {
     max-width: 800px; /* Establece un tamaño máximo para que no ocupe toda la pantalla */
     padding: 20px;
@@ -13,7 +6,7 @@
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
@@ -29,9 +22,6 @@ p#homepage-text {
 
 /* Pantallas de hasta 1024px (tabletas) */
 @media (max-width: 1024px) {
-    .welcome-wrapper {
-        padding: 15px;
-    }
 
     .info-wrapper {
         padding: 15px;

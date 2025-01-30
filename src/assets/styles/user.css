@@ -159,6 +159,10 @@
     margin: 0;
 }
 
+.repo-forked {
+    margin-bottom: 0px;
+}
+
 @media (min-width: 1920px) {
     .user-wrapper {
         margin-left: 17rem;
@@ -171,7 +175,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0.8rem;
+        margin: 0.5rem 1.5rem 0.5rem 1.5rem;
     }
 
     .githubDetails {
@@ -213,7 +217,7 @@
 
 @media (max-width: 380px) { /* Movil */
     .user-wrapper {
-        margin: 2rem;
+        margin: 0.5rem 2rem 0.5rem 2rem;
     }
 
     .avatar {

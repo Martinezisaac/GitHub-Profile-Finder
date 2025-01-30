@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     gap: 10px; 
-    margin: 1.5rem 3rem 1.5rem 3rem;
+    margin: 1rem 3rem 1rem 3rem;
     padding-left: 5rem;
 }
 
@@ -29,7 +29,7 @@
 .input-container{
     position: relative;
     width: 100%;
-    margin: 2rem 3rem 1rem 3rem;
+    margin: 1rem 3rem 1rem 3rem;
     padding-right: 5rem;
 }
 
@@ -63,7 +63,7 @@
 h1 {
     font-family: Menlo-Bold, sans-serif;
     font-weight: bolder;
-    font-size: clamp(0.75rem, 2rem, 2rem);
+    font-size: clamp(0.65rem, 1.5rem, 1.5rem);
 }
 
 @media (min-width: 1920px) { /* PC */
@@ -125,8 +125,9 @@ h1 {
     }
 
     .input-text {
+        font-size: 0.90rem;
         width: 100%;
-        max-width: none;
+        max-width: 20dvh;
     }
 
     .joinedDate p {
@@ -158,7 +159,7 @@ h1 {
     }
 
     .input-text {
-        font-size: 0.875rem;
+        font-size: 0.75rem;
     }
 
     .joinedDate p {
