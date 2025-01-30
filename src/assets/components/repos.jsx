@@ -19,19 +19,31 @@ const Repos = ({ repourl }) => {
           },
         }); //Realizar la busqueda mediante la API de Github y asignar paginacion por cantidad de proyectos (por cada 10 proyectos existe una nueva pagina)
         
-        const repos = await resultRepos.json(); //Convertir los resultados en un objeto JSON
-
-        if (repos.length === 0) { //Validar la longitud de repositorios
-          setHasMore(false); //Entonces ya no existen mas repositorios para mostrar
-        }
-
-        setReposData((prevRepos) => [...prevRepos, ...repos]); //Agregar los repositorios al estado actual existente
-        setPage((prevPage) => prevPage + 1); //Incrementar la paginacion, solicitando mas repositorios 
-
+        if (resultRepos.status === 401) {  // Verifica si el token ha expirado
+          const resultReposWithoutToken = await fetch(`${repourl}?page=${page}&per_page=10`); // Si el token ha expirado, hacer la solicitud sin el token (limitado a 60 peticiones)
+          console.log("it dont Works!");
+          // Si la solicitud sin token es exitosa, procesa los resultados
+          const repos = await resultReposWithoutToken.json();
+          handleReposResponse(repos);
+    
+      } else { //Entonces el token es valido y se procesa la busqueda para obtener la informacion de los repositorios del usuario
+          const repos = await resultRepos.json(); //Convertir los resultados en un objeto JSON
+          console.log("it Works!");
+          handleReposResponse(repos); //Obtener las propiedades del objeto de donde se obtienen los repos
+      }
     } catch (error) { //Atrapar el error (el manejo de error tambien fue validado previamente para mostrar un componente de error en especifico)
         setHasMore(false); //Desactiva el scroll infinito en caso de error
     }
   };
+
+  function handleReposResponse(repos) { //Funcion para obtener las propiedades de los repositorios
+    if (repos.length === 0) { //Validar la longitud de repositorios
+      setHasMore(false); //Entonces ya no existen mas repositorios para mostrar
+    }
+
+    setReposData((prevRepos) => [...prevRepos, ...repos]); //Agregar los repositorios al estado actual existente
+    setPage((prevPage) => prevPage + 1); //Incrementar la paginacion, solicitando mas repositorios 
+  }
 
   useEffect(() => {
     if (!repourl) return; // Verifica que exista una URL, en caso contrario no realiza la busqueda
