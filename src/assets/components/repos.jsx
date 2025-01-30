@@ -21,14 +21,14 @@ const Repos = ({ repourl }) => {
         
         if (resultRepos.status === 401) {  // Verifica si el token ha expirado
           const resultReposWithoutToken = await fetch(`${repourl}?page=${page}&per_page=10`); // Si el token ha expirado, hacer la solicitud sin el token (limitado a 60 peticiones)
-          console.log("it dont Works!");
+
           // Si la solicitud sin token es exitosa, procesa los resultados
           const repos = await resultReposWithoutToken.json();
           handleReposResponse(repos);
     
       } else { //Entonces el token es valido y se procesa la busqueda para obtener la informacion de los repositorios del usuario
           const repos = await resultRepos.json(); //Convertir los resultados en un objeto JSON
-          console.log("it Works!");
+
           handleReposResponse(repos); //Obtener las propiedades del objeto de donde se obtienen los repos
       }
     } catch (error) { //Atrapar el error (el manejo de error tambien fue validado previamente para mostrar un componente de error en especifico)
