@@ -57,6 +57,11 @@ p#homepage-text {
     b {
         font-size: 0.9rem; /* Reducimos el tamaño de los textos en negrita */
     }
+
+    #homepage-text b {
+        display: block;
+        margin-bottom: 0rem;
+    }
 }
 
 /* Pantallas de hasta 480px (móviles muy pequeños) */
@@ -71,5 +76,10 @@ p#homepage-text {
 
     p#homepage-text {
         font-size: 0.85rem; /* Texto aún más pequeño */
+    }
+
+    #homepage-text b {
+        display: block;
+        margin-bottom: 0rem;
     }
 }

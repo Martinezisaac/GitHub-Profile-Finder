@@ -64,7 +64,7 @@ const Welcome = () => {
                     <b>
                         You can also visit the users repositories by clicking on their projects name, if they have a homepage it will be displayed on the cards, so you can visit the final product
                     </b>
-                    <b>
+                    <b className="last-text">
                         Start now and discover the world of GitHub quickly and effortlessly! 
                     </b>
                 </p>
